@@ -9,7 +9,8 @@ public class GetCurrentAuctionUseCase
     public Auction? Execute()
     {
         var repository = new RocketseatAuctionDbContext();
-        var today = DateTime.UtcNow;
+        // var today = DateTime.UtcNow;
+        var today = new DateTime(2024, 01, 25);
 
         return repository
             .Auctions
